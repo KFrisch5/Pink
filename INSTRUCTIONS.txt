@@ -1,0 +1,44 @@
+INSTRUCTIONS
+
+------------------------------------------------------------------------------------------------
+ssh key gen and creation
+------------------------------------------------------------------------------------------------
+
+open git bash
+checking for existing key
+ls -al ~/.ssh
+
+------------------------------------------------------------------------------------------------
+
+ssh-keygen -t rsa -b 4096 -C 'felipedferreira11@gmail.com'
+enter
+enter
+enter
+pub is shared in diff services
+id_rsa is private and is to be kept in your machine
+
+------------------------------------------------------------------------------------------------
+
+Start up the ssh agent program with following cmd
+eval "$(ssh-agent -s)"
+
+should print the PID
+
+then run the following...
+ssh-add ~/.ssh/id_rsa
+
+------------------------------------------------------------------------------------------------
+
+go to git hub
+Setting and SSH page
+add the public key
+
+then run the following cmd
+ssh -T git@github.com
+
+------------------------------------------------------------------------------------------------
+
+git remote add origin git@github.com:MrFiniOrg/Pink.git
+git push -u origin master
+
+------------------------------------------------------------------------------------------------
