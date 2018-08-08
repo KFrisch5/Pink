@@ -1,0 +1,1 @@
+Please add your SSH to your machines and add your credentials to git/github
